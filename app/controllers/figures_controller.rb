@@ -5,11 +5,11 @@ class FiguresController < ApplicationController
 
     figure = Figure.create(name: params[:figure][:name])
 
+    # create title objects from selected titles
     titles = params[:figure][:title_ids]
     titles.map! {|title| Title.find(title)}
 
     figure.titles << titles
-
     figure.save
 
     redirect "/figures/#{figure.id}"
