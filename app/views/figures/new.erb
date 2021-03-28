@@ -16,7 +16,6 @@
   <p>
     <h2>Landmarks</h2>
     <% @landmarks.each do |landmark| %>
-    landmark_<%= landmark.id %>
     <input type="checkbox" id=landmark_"<%= landmark.id %>" name="figure[landmark_ids][]" value="<%= landmark.id %>"><%= landmark.name %><br>
     <% end %>
   </p>
