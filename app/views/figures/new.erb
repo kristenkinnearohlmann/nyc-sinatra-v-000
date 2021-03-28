@@ -6,7 +6,7 @@
   <p>
     <h2>Titles</h2>
     <% @titles.each do |title| %>
-      <input type="checkbox" id="<%= title.name %>"
+      <input type="checkbox" id="<%= title.name %>" name="titles[]" value="<%= title.id %>"
       <%= title.name %><br>
     <% end %>
   </p>
