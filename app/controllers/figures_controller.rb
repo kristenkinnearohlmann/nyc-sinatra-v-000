@@ -21,8 +21,6 @@ binding.pry
   end
 
   get '/figures/new' do
-    @titles = Title.all
-    @landmarks = Landmark.all
 
     erb :'figures/new'
   end
