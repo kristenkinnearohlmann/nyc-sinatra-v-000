@@ -14,7 +14,7 @@ class FiguresController < ApplicationController
     landmarks = params[:figure][:landmark_ids]
     landmarks.map! {|landmark| Landmark.find(landmarks)}
     figure.landmarks << landmarks
-binding.pry
+
     figure.save
 
     redirect "/figures/#{figure.id}"
