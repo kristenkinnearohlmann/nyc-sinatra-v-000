@@ -2,9 +2,9 @@ class FiguresController < ApplicationController
   # add controller methods
 
   post '/figures' do
-    raise params.inspect
+    binding.pry
+
     redirect "/figures/#{figure.id}"
-    erb
   end
 
   get '/figures/new' do
