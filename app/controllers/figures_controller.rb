@@ -5,4 +5,8 @@ class FiguresController < ApplicationController
     
     erb :'figures/new'
   end
+
+  post '/figures' do
+    
+  end
 end
