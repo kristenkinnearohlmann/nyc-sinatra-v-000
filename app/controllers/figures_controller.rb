@@ -2,7 +2,7 @@ class FiguresController < ApplicationController
   # add controller methods
 
   post '/figures' do
-
+    binding.pry
 
     redirect "/figures/#{figure.id}"
   end
