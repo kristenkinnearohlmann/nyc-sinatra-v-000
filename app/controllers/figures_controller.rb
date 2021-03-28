@@ -9,7 +9,7 @@ class FiguresController < ApplicationController
     titles = params[:figure][:title_ids]
     titles.map! {|title| Title.find(title)}
     figure.titles << titles
-
+binding.pry
     # create landmark objects from selected landmarks
     landmarks = params[:figure][:landmark_ids]
     landmarks.map! {|landmark| Landmark.find(landmarks)}
