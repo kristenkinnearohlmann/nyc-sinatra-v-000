@@ -9,7 +9,9 @@ class FiguresController < ApplicationController
     titles.map! {|title| Title.find(title)}
 
     figure.titles << titles
-    binding.pry
+
+    figure.save
+    
     redirect "/figures/#{figure.id}"
   end
 
