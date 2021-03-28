@@ -1,6 +1,12 @@
 class FiguresController < ApplicationController
   # add controller methods
 
+  post '/figures' do
+    raise params.inspect
+
+    erb
+  end
+  
   get '/figures/new' do
     @titles = Title.all
     @landmarks = Landmark.all
@@ -8,7 +14,9 @@ class FiguresController < ApplicationController
     erb :'figures/new'
   end
 
-  post '/figures' do
-    raise params.inspect
+  get '/figures/:id' do
+    
+      erb :'figures/show'
   end
+
 end
