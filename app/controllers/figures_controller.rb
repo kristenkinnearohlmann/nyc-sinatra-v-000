@@ -7,6 +7,6 @@ class FiguresController < ApplicationController
   end
 
   post '/figures' do
-
+    raise params.inspect
   end
 end
