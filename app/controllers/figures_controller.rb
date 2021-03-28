@@ -3,7 +3,7 @@ class FiguresController < ApplicationController
 
   post '/figures' do
     raise params.inspect
-
+    redirect "/figures/#{figure.id}"
     erb
   end
 
