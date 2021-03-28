@@ -13,6 +13,7 @@ class FiguresController < ApplicationController
     landmarks = params[:figure][:landmark_ids]
     landmarks.map! {|landmark| Landmark.find(landmarks)}
 
+    figure.landmarks << landmarks
     figure.titles << titles
     figure.save
 
