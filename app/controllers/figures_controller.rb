@@ -8,13 +8,13 @@ class FiguresController < ApplicationController
     # create title objects from selected titles
     titles = params[:figure][:title_ids]
     titles.map! {|title| Title.find(title)}
+    figure.titles << titles
 
     # create landmark objects from selected landmarks
     landmarks = params[:figure][:landmark_ids]
     landmarks.map! {|landmark| Landmark.find(landmarks)}
-
     figure.landmarks << landmarks
-    figure.titles << titles
+
     figure.save
 
     redirect "/figures/#{figure.id}"
