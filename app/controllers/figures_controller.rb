@@ -2,11 +2,11 @@ class FiguresController < ApplicationController
   # add controller methods
 
   post '/figures' do
-    binding.pry
+
     figure = Figure.create(name: params[:figure][:name])
     titles = params[:figure][:title_ids]
     titles.map! {|title| Title.find(title)}
-
+    binding.pry
     redirect "/figures/#{figure.id}"
   end
 
