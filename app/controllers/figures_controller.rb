@@ -11,7 +11,7 @@ class FiguresController < ApplicationController
     figure.titles << titles
 
     figure.save
-    
+
     redirect "/figures/#{figure.id}"
   end
 
