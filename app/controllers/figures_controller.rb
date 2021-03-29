@@ -49,7 +49,7 @@ class FiguresController < ApplicationController
   # so it is available for use
   patch '/figures/:id' do
     figure = Figure.find(params[:id])
-    binding.pry
+    figure.name = params[:figure][:name]
 
     redirect "/figures/#{figure.id}"
   end
