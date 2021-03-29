@@ -117,6 +117,7 @@ describe FiguresController do
   it "allows you to edit a single figure" do
     @original_figure = Figure.first
     visit "/figures/#{@original_figure.id}/edit"
+    binding.pry
     fill_in :figure_name, with: "Missy"
     fill_in :new_landmark, with: "Big Tower"
     click_button "Edit Figure"
