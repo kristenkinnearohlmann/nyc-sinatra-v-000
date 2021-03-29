@@ -28,6 +28,11 @@ class FiguresController < ApplicationController
     redirect "/figures/#{figure.id}"
   end
 
+  patch '/figures' do
+
+    redirect "/figures/#{figure.id}"
+  end
+
   get '/figures/new' do
 
     erb :'figures/new'
