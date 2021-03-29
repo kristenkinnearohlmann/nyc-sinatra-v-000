@@ -1,6 +1,11 @@
 class FiguresController < ApplicationController
   # add controller methods
 
+  get '/figures' do
+
+    erb :'index'
+  end
+
   post '/figures' do
     # Worked with Matthew and looked at student and main solutions and finally determined the issue.
     # For the test with landmarks, title isn't passed and landmark is.
