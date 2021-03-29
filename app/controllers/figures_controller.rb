@@ -9,6 +9,9 @@ class FiguresController < ApplicationController
     # creating with the hash, so I was doing it the longer way. But doing so meant that the associations
     # were not being made as expected. LESSON LEARNED!!
     figure = Figure.create(params[:figure])
+    if !params[:title][:name].empty?
+
+    end
     binding.pry
 
     redirect "/figures/#{figure.id}"
