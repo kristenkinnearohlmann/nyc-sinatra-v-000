@@ -45,9 +45,11 @@ class FiguresController < ApplicationController
     erb :'figures/edit'
   end
 
-    patch '/figures/:id' do
+  # Remember to pass back the id in the URL for put/patch
+  # so it is available for use
+  patch '/figures/:id' do
 
-      redirect "/figures/#{figure.id}"
-    end
+    redirect "/figures/#{figure.id}"
+  end
 
 end
