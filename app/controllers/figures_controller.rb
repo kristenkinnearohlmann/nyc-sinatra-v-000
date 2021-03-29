@@ -3,7 +3,7 @@ class FiguresController < ApplicationController
 
   post '/figures' do
 
-    figure = Figure.create(name: params[:figure][:name])
+    figure = Figure.create(params[:figure])
 binding.pry
 #     # create title objects from selected titles
 #     titles = params[:figure][:title_ids]
