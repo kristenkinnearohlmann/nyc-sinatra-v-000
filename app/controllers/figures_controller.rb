@@ -16,7 +16,7 @@ binding.pry
     if !params[:landmark][:name].empty?
       figure.landmarks << Landmark.create(params[:landmark])
     end
-
+binding.pry
     figure.save
     redirect "/figures/#{figure.id}"
   end
