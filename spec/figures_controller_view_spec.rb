@@ -41,13 +41,13 @@ describe FiguresController do
   it "allows you to create a new figure with a landmark" do
     visit '/figures/new'
     fill_in :figure_name, :with => "Doctor Who"
-    binding.pry
     check "landmark_#{Landmark.first.id}"
     click_button "Create New Figure"
     figure = Figure.last
     expect(Figure.all.count).to eq(3)
     expect(figure.name).to eq("Doctor Who")
     expect(figure.landmarks).to include(Landmark.first)
+    binding.pry
   end
 
    it "allows you to create a new figure with a new title" do
