@@ -2,7 +2,7 @@
 
 <!-- add content here -->
 <% Landmark.all.each do |landmark| %>
-  <%= landmark.name %><br>
+  <%= landmark.name %> constructed in <%= landmark.year_completed %><br>
 <% end %>
 
 <a class="button" href="/figures">Figures</a>
