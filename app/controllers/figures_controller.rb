@@ -51,6 +51,7 @@ class FiguresController < ApplicationController
     figure = Figure.find(params[:id])
     figure.name = params[:figure][:name]
 
+    figure.save
     redirect "/figures/#{figure.id}"
   end
 
