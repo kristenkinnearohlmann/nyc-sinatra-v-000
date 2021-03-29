@@ -6,7 +6,9 @@ class FiguresController < ApplicationController
     # For the test with landmarks, title isn't passed and landmark is.
     # Since I was trying to create my code to create individual work with titles and landmarks, rather than
     # creating via the params hash, it failed. I hadn't had success, nor any tests failed me, on
-    # creating with the hash, so I was doing it the longer way. But doing so meant that the associations
+    # creating without the hash in other labs, so I was doing it the longer way all the time,
+    # especially because in earliers labs, my hashes had extra "junk" in them I could never figure out
+    # how it got there or why. Not creating the figure via the params hash so meant that the associations
     # were not being made as expected. LESSON LEARNED!!
     figure = Figure.create(params[:figure])
     if !params[:title][:name].empty?
