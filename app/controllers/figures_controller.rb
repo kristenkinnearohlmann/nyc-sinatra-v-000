@@ -48,6 +48,8 @@ class FiguresController < ApplicationController
   # Remember to pass back the id in the URL for put/patch
   # so it is available for use
   patch '/figures/:id' do
+    figure = Figure.find(params[:id])
+    binding.pry
 
     redirect "/figures/#{figure.id}"
   end
