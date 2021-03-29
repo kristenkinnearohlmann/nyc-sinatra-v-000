@@ -50,6 +50,7 @@ class FiguresController < ApplicationController
   patch '/figures/:id' do
     figure = Figure.find(params[:id])
     figure.name = params[:figure][:name]
+    binding.pry
 
     figure.save
     redirect "/figures/#{figure.id}"
