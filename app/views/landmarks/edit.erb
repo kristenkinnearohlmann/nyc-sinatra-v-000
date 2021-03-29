@@ -9,7 +9,7 @@
   </p>
   <p>
     <label for="landmark_year_completed">Landmark name: </label>
-    <input type="text" id="landmark_year_completed" name="landmark[year_completed]" value="%= @landmark.year_completed %">
+    <input type="text" id="landmark_year_completed" name="landmark[year_completed]" value="%= @landmark.year_completed.to_s %">
   </p>
   <input type="submit" name="Edit Landmark">
 </form>
