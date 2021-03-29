@@ -2,7 +2,7 @@ class FiguresController < ApplicationController
   # add controller methods
 
   post '/figures' do
-    # Worked with Matthew and looked at student and main solutions and finally determined the issue
+    # Worked with Matthew and looked at student and main solutions and finally determined the issue.
     # For the test with landmarks, title isn't passed and landmark is
     # Since I was trying to create my code to individual work with titles and landmarks, rather than
     # creating via the params hash, it failed. I hadn't had success, nor any tests failed me, on
